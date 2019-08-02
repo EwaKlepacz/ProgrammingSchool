@@ -50,7 +50,7 @@ public class User {
                 '}';
     }
 
-}
+
 
     @Override
     public boolean equals(Object o) {
@@ -62,6 +62,6 @@ public class User {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id);
+        return Objects.hash(id,email);
     }
 }
