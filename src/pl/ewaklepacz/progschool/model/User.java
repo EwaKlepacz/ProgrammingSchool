@@ -8,6 +8,10 @@ public class User {
     private String password;
     private String email;
 
+    public User() {
+
+    }
+
     public int getId() {
         return id;
     }
@@ -50,18 +54,17 @@ public class User {
                 '}';
     }
 
-
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return id == user.id;
+        return id == user.id &&
+                Objects.equals(email, user.email);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id,email);
+        return Objects.hash(id, email);
     }
 }
